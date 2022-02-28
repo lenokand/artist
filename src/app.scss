@@ -1,0 +1,400 @@
+@import  'public/font/stylesheet.css';
+
+
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a{text-decoration: none;}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+// @media (prefers-reduced-motion: reduce) {
+//   * {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//     scroll-behavior: auto !important;
+//   }
+// }
+
+body{
+    font-family: 'TT Norms Pro';
+}
+
+.container {
+    max-width: 1340px;
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.header-top{
+    padding-top: 26px;
+    padding-bottom: 30px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-block{
+        display: flex;
+        align-items: center;
+
+        .logo-line{
+          background: #D9AD95;
+          height:  40px;
+          width: 2px;
+          margin-left: 30px;
+          margin-right: 30px;
+          
+
+        }
+        .logo-sign{
+            max-width: 175px;
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+
+            /* 1 */
+
+            color: #2C2C2C;
+
+        }
+    }
+
+    .mail-block{
+        display: flex;
+        align-items: center;
+        
+        background: #FFFFFF;
+        border-radius: 100px;
+        padding-right: 16px;
+        padding-left: 58px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        position: relative;
+        .mail-block_img{
+            background: radial-gradient(84.65% 132.74% at 50% -32.74%, #FF98A9 0%, #FB5B74 100%);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 120%;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 24px);
+        }
+        a{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #D9AD95;
+            transition: 300ms ease;
+            &:hover{
+                color: #AD6952;
+
+            }
+        }
+    }
+    .social-block{
+        display: flex;
+        a{
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 120%;
+            margin-right: 10px;
+            background: #FFFFFF;
+        }
+    }
+
+    .call-block{
+        display: flex;
+        flex-direction: column;
+        padding-top: 33px;
+        .call-block-row{
+            display: flex;
+            align-items: center;
+            .img_item{
+                background: radial-gradient(84.65% 132.74% at 50% -32.74%, #FF98A9 0%, #FB5B74 100%);
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 120%;
+                margin-right: 18px;
+            }
+            a{
+                font-family: TT Norms Pro;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                /* identical to box height */
+
+                text-align: right;
+
+                /* 1 */
+
+                color: #2C2C2C;
+                transition: 300ms ease;
+                &:hover{
+                    color: #AD6952;
+                }
+
+            }
+        }
+        .callback-call{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 32px;
+            /* identical to box height, or 200% */
+            display: flex;
+            align-self: flex-end;
+
+            color: #FB5B74;
+            transition: 300ms ease;
+            
+            border-bottom: 1px dashed #FB5B74;
+            &:hover{
+                color: #AD6952;
+                border-bottom: 1px dashed #AD6952;
+            }
+        }
+    }
+    
+}
+menu{
+    padding-left: 0;
+    .container{
+        background: #fff;
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    border-radius: 18px;
+    padding: 20px 48px;
+    }
+    .menu-item{
+        font-family: TT Norms Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+text-transform: uppercase;
+
+/* 1 */
+
+color: #2C2C2C;
+transition: 300ms ease;
+&.active{
+    font-weight: bold;
+}
+&:hover{
+    color: #AD6952;
+}
+
+    }
+}
+.main-section{
+    background: url(public/products/bg_main.png);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+    
+    // background: #EFD7C8;
+}
+
+.active-btn{
+    background: url(public/products/btn.png), radial-gradient(84.65% 132.74% at 50% -32.74%, #FF98A9 0%, #FB5B74 100%);
+    box-shadow: 0px 4px 0px #E26378;
+    border-radius: 10px;
+    width: 312px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: TT Norms Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    position: relative;
+    &:after{
+        content: '';
+        display: block;
+        background: #C75164;
+        filter: blur(24px);
+        border-radius: 10px;
+        width: 290px;
+        height: 32px;
+        position: absolute;
+        z-index: -1;
+        bottom: -3px;
+        left: calc( 50% - 135px);
+        transition: 300ms ease;
+    }
+    &:hover{
+        &:after{
+            content: '';
+           
+            height: 2px;
+         
+          
+            bottom: 0;
+        }
+       
+        
+    }
+ 
+
+
+}
+
+.swiper_main{
+    .swiper-slide{
+        padding-bottom: 15px;
+        .container{
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 660px;
+        }
+
+        .slide-title{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 60px;
+            line-height: 72px;
+
+            /* 1 */
+
+            color: #2C2C2C;
+            margin-bottom: 40px;
+        }
+        .slide-subtitle{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+            color: #2C2C2C;
+            display: flex;
+            align-items: center;
+            .pointer{
+                width: 10px;
+                height: 10px;
+                border-radius: 120%;
+                background: #FF98A9;
+                margin-right: 14px;
+
+            }
+            margin-bottom: 70px;
+        }
+        .slider-img{
+            position: absolute;
+            top: 0;
+            right: -30px;
+            bottom: 0;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+   .swiper-pagination-bullet {
+        background: #D9AD95;
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+       
+        width: 15px;
+        height: 15px;
+        box-shadow: 0px 4px 4px rgba(176, 136, 114, 0.18);
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+            background: #AD6952;
+        }
+    }
+}
