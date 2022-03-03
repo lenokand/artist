@@ -32,6 +32,11 @@ dl,
 dd {
     margin: 0;
 }
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
@@ -273,7 +278,17 @@ body {
 
 menu {
     padding-left: 0;
-
+    &.stiky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        .container{
+            background-image: url(public/products/bg-menu.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
     .container {
         background: #fff;
         display: flex;
@@ -674,10 +689,12 @@ menu {
     .header-top .call-block .callback-call {
         align-self: flex-start;
     }
-
+    .swiper_main .swiper-slide .container{
+        justify-content: flex-end;
+    }
     .swiper_main .swiper-slide .slider-img {
         position: static;
-        height: 400px;
+        height: 350px;
     }
 
     .swiper_main .swiper-slide .container {
@@ -1788,4 +1805,376 @@ transition: 300ms ease;
     }
     }
     
+}
+
+
+
+#modal-call, #modal-call-second{
+    display: none;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: #EFD7C8;
+    background: url(public/products/bg-form.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    .modal-title{
+        font-family: TT Norms Pro;
+        font-style: normal;
+
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+
+        color: #282828;
+        margin-bottom: 45px;
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    textarea{
+        resize: none;
+        margin-bottom: 15px;
+        background: #F4F4F4;
+        border-radius: 10px;
+        display: block;
+        border: none;
+        padding: 36px 28px ;
+        &::placeholder{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            color: #D9AD95;
+        }
+    }
+    input{
+        margin-bottom: 15px;
+        background: #F4F4F4;
+        border-radius: 10px;
+        display: block;
+        border: none;
+        padding: 36px 28px ;
+        &::placeholder{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            color: #D9AD95;
+        }
+    }
+    .active-btn{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+}
+
+
+label {
+   
+    display: flex;
+    align-items: center;
+    font-family: TT Norms Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+line-height: 32px;
+align-self: center;
+    color: #2C2C2C;
+    a{
+        color: #FB5B74;
+        text-decoration: underline;
+    }
+    input {
+      margin-bottom: 0;
+      opacity: 0;
+      position: absolute;
+
+
+      ~.custom_chk {
+       
+        width: 13px;
+        height: 13px;
+        background:  #FFF;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-1px);
+        max-width: 13px;
+        flex-basis: 16%;
+        margin-right: 10px;
+        img {
+          position: static;
+          opacity: 0;
+        }
+      }
+
+      &:checked {
+        ~.custom_chk {
+          width: 13px;
+          height: 13px;
+          background: #FB5B74;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translateY(-1px);
+          max-width: 13px;
+          flex-basis: 16%;
+
+          img {
+            opacity: 1;
+            position: static;
+            max-width: toRem(9);
+          }
+        }
+
+      }
+    }
+}
+
+
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 70px;
+    width: 70px;
+    height: 70px;
+    display: none;
+    border-radius: 120%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    //    transform: rotate(-90deg);
+    color: #fff;
+    cursor: pointer;
+    background: radial-gradient(84.65% 132.74% at 50% -32.74%,#ff98a9 0,#fb5b74 100%);
+    
+
+    svg {
+      transform: rotate(-90deg);
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    #modal-call, #modal-call-second{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        .modal-title{
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: 15px;
+        }
+
+    }
+    #btn-back-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+footer{
+    background: #F4E5DC;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    .footer-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .menu-col-title{
+        font-family: TT Norms Pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 114.3%;
+        color: #2C2C2C;
+        margin-bottom: 30px;
+    }
+    .menu-col{
+        display: flex;
+        flex-direction: column;
+      
+        .menu-col-item{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 114.3%;
+            margin-bottom: 30px;
+            color: #232323;
+            transition: 300ms ease;
+            &:hover{
+                color: #AD6952;
+            }
+        }
+    }
+    .menu-col-contacts{
+        display: flex;
+        flex-direction: column;
+        .menu-col-item{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 148.3%;
+            color: #232323;
+            margin-bottom: 18px;
+        }
+        .menu-col-item.colored{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 148.3%;
+            margin-bottom: 6px;
+            color: #FB5B74;
+
+        }
+
+    }
+    .social-col{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .phone{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+
+            text-align: right;
+
+            /* 1 */
+
+            color: #2C2C2C;
+            display: block;
+        }
+        .callback-call{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 32px;
+            /* identical to box height, or 200% */
+            display: flex;
+            align-self: flex-end;
+
+            color: #FB5B74;
+            transition: 300ms ease;
+
+            border-bottom: 1px dashed #FB5B74;
+            margin-bottom: 30px;
+            &:hover {
+                color: #AD6952;
+                border-bottom: 1px dashed #AD6952;
+            }
+        }
+        .social-block {
+            display: flex;
+    
+            a {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 120%;
+                margin-right: 10px;
+                background: #FFFFFF;
+            }
+        }
+    }
+    .footer-copyright{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .copy{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #2C2C2C;
+        }
+        .politics{
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: right;
+            text-decoration-line: underline;
+            color: #AD6952;
+            transition: 300ms ease;
+            &:hover {
+                color: #FB5B74;
+         
+               
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    footer .footer-menu{
+        flex-wrap: wrap;
+        .logo-block{
+            width: 100%;
+            margin-bottom: 45px;
+            justify-content: center;
+        }
+        .social-col{
+            width: 100%;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            .callback-call{
+                align-self: center;
+            }
+
+        }
+        .menu-col-contacts,.menu-col{
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width:460px) {
+    footer .footer-menu{
+       
+        
+        .menu-col-contacts,.menu-col{
+            width: 100%;
+        }
+    }
+}
+
+
+
+.adress{
+    padding-top: 120px;
+    padding-bottom: 140px;
+    .adress-title{
+        font-family: TT Norms Pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        color: #2C2C2C;
+        margin-bottom: 18px;
+    }
 }
