@@ -16,9 +16,9 @@ var swiper_reviews = new Swiper(".swiper_main", {
     //     prevEl: ".swiper-button-prev",
     //     // clickable: true,
     // },
-    // autoplay: {
-    //     delay: 9000,
-    // },
+    autoplay: {
+        delay: 6000,
+    },
 });
 
 var services_swiper = new Swiper(".services-swiper", {
@@ -52,7 +52,46 @@ var services_swiper = new Swiper(".services-swiper", {
       slidesPerView: 3,
     
     }
-  }
+  },
+  autoplay: {
+    delay: 6000,
+},
+});
+var team_swiper = new Swiper(".team-swiper", {
+  spaceBetween: 35,
+  slidesPerView: 3,
+  
+  speed: 600,
+  // autoHeight: true,
+
+  navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+      // clickable: true,
+  },
+  // autoplay: {
+  //     delay: 9000,
+  // },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      
+    },
+    // when window width is >= 480px
+    690: {
+      slidesPerView: 2,
+   
+    },
+    // when window width is >= 640px
+    1450: {
+      slidesPerView: 3,
+    
+    }
+  },
+  autoplay: {
+    delay: 6000,
+},
 });
 
 
@@ -68,6 +107,8 @@ var heart_review = document.getElementById('review-heart');
 var parallaxInstance3 = new Parallax(heart_review);
 var team_leaf = document.getElementById('team-leaf');
 var parallaxInstance3 = new Parallax(team_leaf);
+var news_leaf = document.getElementById('news-leaf');
+var parallaxInstance3 = new Parallax(news_leaf);
 
 
 // бургер меню
@@ -84,3 +125,16 @@ icons.forEach (icon => {
 
   });
 });
+
+
+
+// показать еще (сео-текст)
+
+let show_btn = document.querySelector('.show-more')
+let hidden_text = document.querySelector('.hidden-text')
+
+show_btn.addEventListener('click', function(){
+  hidden_text.classList.add('show')
+  show_btn.classList.add('hide')
+})
+
