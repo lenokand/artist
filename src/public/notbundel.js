@@ -98,19 +98,47 @@ var team_swiper = new Swiper(".team-swiper", {
 // эфект паралакса
 
 var heart_left = document.getElementById('heart-left');
-var parallaxInstance1 = new Parallax(heart_left);
+if(heart_left){
+  var parallaxInstance1 = new Parallax(heart_left);
+}
 var heart_right = document.getElementById('heart-right');
-var parallaxInstance2 = new Parallax(heart_right);
+if(heart_right){
+  var parallaxInstance2 = new Parallax(heart_right);
+}
 var heart_about = document.getElementById('about-heart');
+if(heart_about ){
 var parallaxInstance3 = new Parallax(heart_about);
+}
+
 var heart_review = document.getElementById('review-heart');
+if(heart_review ){
 var parallaxInstance3 = new Parallax(heart_review);
+}
+
+
 var team_leaf = document.getElementById('team-leaf');
-var parallaxInstance3 = new Parallax(team_leaf);
+if(team_leaf  ){
+var parallaxInstance3 = new Parallax(team_leaf);}
+
 var news_leaf = document.getElementById('news-leaf');
-var parallaxInstance3 = new Parallax(news_leaf);
+if(news_leaf ){
+var parallaxInstance3 = new Parallax(news_leaf);}
+
 var adress_leaf = document.getElementById('adress-leaf');
-var parallaxInstance3 = new Parallax(adress_leaf);
+if(adress_leaf ){
+var parallaxInstance3 = new Parallax(adress_leaf);}
+
+var inner_leaf = document.getElementById('inner-leaf1');
+if(inner_leaf ){
+var parallaxInstance3 = new Parallax(inner_leaf);}
+
+var inner_leaf2 = document.getElementById('inner-leaf2');
+if(inner_leaf2){
+var parallaxInstance3 = new Parallax(inner_leaf2);}
+
+var content_heart = document.getElementById('content-heart');
+if(content_heart){
+var parallaxInstance3 = new Parallax(content_heart);}
 
 
 // бургер меню
@@ -135,10 +163,13 @@ icons.forEach (icon => {
 let show_btn = document.querySelector('.show-more')
 let hidden_text = document.querySelector('.hidden-text')
 
-show_btn.addEventListener('click', function(){
-  hidden_text.classList.add('show')
-  show_btn.classList.add('hide')
-})
+if(show_btn){
+  show_btn.addEventListener('click', function(){
+    hidden_text.classList.add('show')
+    show_btn.classList.add('hide')
+  })
+}
+
 
 
 
@@ -291,7 +322,7 @@ const SELECTOR_OPTION_SELECTED = '.select__option_selected';
 let SELECT_CONTENT = document.querySelectorAll('.adress-block .select-content')
 
 function changeContent(target){
-
+if(SELECT_CONTENT.length > 0){
   if(SELECT_CONTENT[target.getAttribute('data-index')].classList.contains('show')){
 
     // console.log(SELECT_CONTENT , target.getAttribute('data-index'));
@@ -300,6 +331,8 @@ function changeContent(target){
     document.querySelector('.adress-block .select-content.show')? document.querySelector('.adress-block .select-content.show').classList.remove('show'): ''
     SELECT_CONTENT[target.getAttribute('data-index')].classList.add('show')
   }
+}
+  
   
   
 }
@@ -445,4 +478,6 @@ document.addEventListener('click', (e) => {
 
 
 // #select-1 - селектор для выбора элемента, который необходимо инициализировать как CustomSelect
-const select1 = new CustomSelect('#select-1');
+if(document.getElementById("select-1")){
+  const select1 = new CustomSelect('#select-1');
+}
