@@ -140,6 +140,14 @@ var content_heart = document.getElementById('content-heart');
 if(content_heart){
 var parallaxInstance3 = new Parallax(content_heart);}
 
+var serviceg_heart = document.getElementById('serviceg-heart');
+if(serviceg_heart){
+var parallaxInstance3 = new Parallax(serviceg_heart);}
+
+var map_leaf = document.getElementById('map-leaf');
+if(map_leaf){
+var parallaxInstance3 = new Parallax(map_leaf);}
+
 
 // бургер меню
 

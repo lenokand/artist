@@ -2599,7 +2599,14 @@ table {
     padding-bottom: 120px;
     background-size: 100% 80%;
 
-    
+    .container{
+        position: relative;
+    }
+    #serviceg-heart{
+        position: absolute;
+        right: -30px;
+        top: -100px;
+    }
 
     .services-title {
         font-family: TT Norms Pro;
@@ -2720,7 +2727,11 @@ table {
         .active-btn{
             width: 100%;
         }
+        #serviceg-heart{
+         display: none;
+        }
     }
+
     
 }
 
@@ -2773,4 +2784,16 @@ table {
      
     }
     
+}
+
+
+.map-section{
+    .container{
+        position: relative;
+    }
+    #map-leaf{
+        position: absolute;
+        top: -50px;
+        left: 17%;
+    }
 }
