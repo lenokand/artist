@@ -288,6 +288,23 @@ const SELECTOR_DATA = '[data-select]';
 const SELECTOR_DATA_TOGGLE = '[data-select="toggle"]';
 const SELECTOR_OPTION_SELECTED = '.select__option_selected';
 
+let SELECT_CONTENT = document.querySelectorAll('.adress-block .select-content')
+
+function changeContent(target){
+
+  if(SELECT_CONTENT[target.getAttribute('data-index')].classList.contains('show')){
+
+    // console.log(SELECT_CONTENT , target.getAttribute('data-index'));
+  }
+  else{
+    document.querySelector('.adress-block .select-content.show')? document.querySelector('.adress-block .select-content.show').classList.remove('show'): ''
+    SELECT_CONTENT[target.getAttribute('data-index')].classList.add('show')
+  }
+  
+  
+}
+
+
 class CustomSelect {
   constructor(target, params) {
     this._elRoot = typeof target === 'string' ? document.querySelector(target) : target;
@@ -308,8 +325,10 @@ class CustomSelect {
         break;
       case 'option':
         this._changeValue(target);
+        changeContent(target)
         break;
     }
+   
   }
   _update(option) {
     option = option.closest('.select__option');
