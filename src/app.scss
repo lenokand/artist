@@ -3416,3 +3416,76 @@ margin-bottom: 140px;
 }
     
 }
+
+
+.blog-block{
+    padding-top: 120px;
+    padding-bottom: 50px;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .blog-item{
+        width: calc(25% - 30px);
+        margin-bottom: 50px;
+
+        margin-right: 15px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            margin-bottom: 20px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 24px;
+        }
+    
+        .item-title {
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+    
+            color: #2C2C2C;
+            margin-bottom: 10px;
+        }
+    
+        .item-description {
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+    
+    
+            color: #747474;
+            margin-bottom: 15px;
+        }
+    
+        .more {
+            font-family: TT Norms Pro;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            align-self: flex-start;
+            /* 5 */
+    
+            color: #FB5B74;
+            border-bottom: 1px dashed #FB5B74;
+            padding-bottom: 2px;
+            transition: 300ms ease;
+    
+            &:hover {
+                color: #ad6952;
+                border-bottom: 1px dashed #ad6952;
+            }
+        }
+    }
+}

@@ -50,6 +50,11 @@ module.exports = {
             filename: 'examples.html',
             template: './src/html/examples.html',
             inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'blog.html',
+            template: './src/html/blog.html',
+            inject: 'body'
         })
     ],
     module: {
