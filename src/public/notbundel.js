@@ -148,6 +148,10 @@ var map_leaf = document.getElementById('map-leaf');
 if(map_leaf){
 var parallaxInstance3 = new Parallax(map_leaf);}
 
+var content_leaf = document.getElementById('content-leaf');
+if(content_leaf){
+var parallaxInstance3 = new Parallax(content_leaf);}
+
 
 // бургер меню
 

@@ -60,6 +60,16 @@ module.exports = {
             filename: 'salons.html',
             template: './src/html/salons.html',
             inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'content.html',
+            template: './src/html/content.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'review.html',
+            template: './src/html/review.html',
+            inject: 'body'
         })
     ],
     module: {
