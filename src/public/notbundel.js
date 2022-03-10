@@ -57,6 +57,91 @@ var services_swiper = new Swiper(".services-swiper", {
     delay: 6000,
 },
 });
+var swiper_video = new Swiper(".swiper_video", {
+  spaceBetween: 35,
+  slidesPerView: 4,
+  
+  speed: 600,
+  // autoHeight: true,
+
+  navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+      // clickable: true,
+  },
+  // autoplay: {
+  //     delay: 9000,
+  // },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      
+    },
+    600: {
+      slidesPerView: 2,
+      
+    },
+    // when window width is >= 480px
+    960: {
+      slidesPerView: 3,
+   
+    },
+    1200: {
+      slidesPerView: 4,
+   
+    },
+  
+    1450: {
+      slidesPerView: 4,
+    
+    }
+  },
+  autoplay: {
+    delay: 6000,
+},
+});
+
+
+
+var swiper_photo = new Swiper(".swiper_photo", {
+  spaceBetween: 0,
+  slidesPerView: 1,
+  
+  speed: 600,
+  // autoHeight: true,
+
+  navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+      // clickable: true,
+  },
+  // autoplay: {
+  //     delay: 9000,
+  // },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 30,
+      
+    },
+    // when window width is >= 480px
+    960: {
+      spaceBetween: 0,
+   
+    },
+    // when window width is >= 640px
+    1450: {
+   
+      spaceBetween: 0,
+    
+    }
+  },
+  autoplay: {
+    delay: 6000,
+},
+});
+
 var team_swiper = new Swiper(".team-swiper", {
   spaceBetween: 35,
   slidesPerView: 3,

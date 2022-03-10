@@ -2,7 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-var ImageminPlugin = require('imagemin-webpack-plugin').default
+// var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
     entry: ['./src/app.js', './src/app.scss'],
@@ -28,48 +28,55 @@ module.exports = {
                 }
             ]
         }),
-        new ImageminPlugin({
-            disable: process.env.NODE_ENV !== 'production', // Disable during development
-            test: /\.(jpe?g|png|gif|svg)$/i ,
-            pngquant: {
-                quality: '50-60'
-              }
+        // new ImageminPlugin({
+        //     disable: process.env.NODE_ENV !== 'production', // Disable during development
+        //     test: /\.(jpe?g|png|gif|svg)$/i ,
+        //     pngquant: {
+        //         quality: '30-50'
+        //       }
         
-        }),
+        // }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/html/index.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             filename: 'salon.html',
             template: './src/html/salon.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             filename: 'examples.html',
             template: './src/html/examples.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             filename: 'blog.html',
             template: './src/html/blog.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             filename: 'salons.html',
             template: './src/html/salons.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             filename: 'content.html',
             template: './src/html/content.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         }),
         new HtmlWebpackPlugin({
             filename: 'review.html',
             template: './src/html/review.html',
-            inject: 'body'
+            inject: 'body',
+            minify: false
         })
     ],
     module: {
