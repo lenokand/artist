@@ -420,13 +420,13 @@ let SELECT_CONTENT = document.querySelectorAll('.adress-block .select-content')
 
 function changeContent(target){
 if(SELECT_CONTENT.length > 0){
-  if(SELECT_CONTENT[target.getAttribute('data-index')].classList.contains('show')){
+  if(SELECT_CONTENT[(target.getAttribute('data-index') - 1)].classList.contains('show')){
 
     // console.log(SELECT_CONTENT , target.getAttribute('data-index'));
   }
   else{
     document.querySelector('.adress-block .select-content.show')? document.querySelector('.adress-block .select-content.show').classList.remove('show'): ''
-    SELECT_CONTENT[target.getAttribute('data-index')].classList.add('show')
+    SELECT_CONTENT[(target.getAttribute('data-index') - 1)].classList.add('show')
   }
 }
   

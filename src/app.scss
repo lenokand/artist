@@ -478,6 +478,7 @@ menu {
     right: -75px;
     top: 317px;
     z-index: 2;
+    width: 400px;
 }
 
 
@@ -1581,6 +1582,7 @@ ul {
 
         color: #2C2C2C;
         margin-bottom: 10px;
+        align-self: flex-start;
     }
 
     .item-description {
@@ -1589,9 +1591,7 @@ ul {
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        /* or 150% */
-
-
+        align-self: flex-start;
         color: #747474;
         margin-bottom: 15px;
     }
@@ -2375,8 +2375,8 @@ footer {
         background: #EFD7C8;
         border-radius: 24px;
         border: none;
-        max-height: 10rem;
-        overflow-y: auto;
+        // max-height: 10rem;
+        // overflow-y: auto;
 
         z-index: 2;
 
@@ -3459,6 +3459,7 @@ label {
 
             color: #2C2C2C;
             margin-bottom: 10px;
+            align-self: flex-start;
         }
 
         .item-description {
@@ -3467,7 +3468,7 @@ label {
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
-            /* or 150% */
+            align-self: flex-start;
 
 
             color: #747474;
@@ -3687,6 +3688,7 @@ label {
 
             color: #2C2C2C;
             margin-bottom: 10px;
+            align-self: flex-start;
         }
 
         .item-description {
@@ -3695,8 +3697,8 @@ label {
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
-            /* or 150% */
-
+           
+            align-self: flex-start;
 
             color: #747474;
             margin-bottom: 15px;
