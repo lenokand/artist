@@ -137,9 +137,9 @@ var swiper_photo = new Swiper(".swiper_photo", {
     
     }
   },
-  autoplay: {
-    delay: 6000,
-},
+//   autoplay: {
+//     delay: 6000,
+// },
 });
 
 var team_swiper = new Swiper(".team-swiper", {
