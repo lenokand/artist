@@ -42,42 +42,42 @@ module.exports = {
             inject: 'body',
             minify: false
         }),
-        new HtmlWebpackPlugin({
-            filename: 'salon.html',
-            template: './src/html/salon.html',
-            inject: 'body',
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'examples.html',
-            template: './src/html/examples.html',
-            inject: 'body',
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'blog.html',
-            template: './src/html/blog.html',
-            inject: 'body',
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'salons.html',
-            template: './src/html/salons.html',
-            inject: 'body',
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'content.html',
-            template: './src/html/content.html',
-            inject: 'body',
-            minify: false
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'review.html',
-            template: './src/html/review.html',
-            inject: 'body',
-            minify: false
-        })
+        // new HtmlWebpackPlugin({
+        //     filename: 'salon.html',
+        //     template: './src/html/salon.html',
+        //     inject: 'body',
+        //     minify: false
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'examples.html',
+        //     template: './src/html/examples.html',
+        //     inject: 'body',
+        //     minify: false
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'blog.html',
+        //     template: './src/html/blog.html',
+        //     inject: 'body',
+        //     minify: false
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'salons.html',
+        //     template: './src/html/salons.html',
+        //     inject: 'body',
+        //     minify: false
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'content.html',
+        //     template: './src/html/content.html',
+        //     inject: 'body',
+        //     minify: false
+        // }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'review.html',
+        //     template: './src/html/review.html',
+        //     inject: 'body',
+        //     minify: false
+        // })
     ],
     module: {
         rules: [
