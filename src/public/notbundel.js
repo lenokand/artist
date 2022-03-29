@@ -8,7 +8,7 @@ var w = c.width = window.innerWidth;
 var h = c.height = window.innerHeight;
 
 var txt = function() {
-  var _t = "Загрузка".split("").join(String.fromCharCode(0x2004));
+  var _t = "Загрузка...".split("").join(String.fromCharCode(0x2004));
   numfunc.font = "Archive";
   numfunc.fillStyle = '#fff';
   numfunc.fillText(_t, (c.width - numfunc.measureText(_t).width) * 0.5, c.height * 0.5);
@@ -73,6 +73,31 @@ $(window).on('load', function() {
 
 
 // // слайдеры
+
+
+var swiper_news = new Swiper(".swiper_news", {
+    // spaceBetween: 30,
+    // effect: "fade",
+    speed: 600,
+    // autoHeight: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   type: 'bullets',
+    //   clickable: 'true',
+    // },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        // clickable: true,
+    },
+    autoplay: {
+        delay: 6000,
+    },
+});
+
+
+
+
 
 
 // var swiper_reviews = new Swiper(".swiper_main", {
