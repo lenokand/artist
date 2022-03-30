@@ -86,13 +86,13 @@ var swiper_news = new Swiper(".swiper_news", {
     //   clickable: 'true',
     // },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-navigation-next",
+        prevEl: ".swiper-navigation-prev",
         // clickable: true,
     },
-    autoplay: {
-        delay: 6000,
-    },
+    // autoplay: {
+    //     delay: 6000,
+    // },
 });
 
 
