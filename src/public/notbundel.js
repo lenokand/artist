@@ -90,9 +90,9 @@ var swiper_news = new Swiper(".swiper_news", {
         prevEl: ".swiper-navigation-prev",
         // clickable: true,
     },
-    // autoplay: {
-    //     delay: 6000,
-    // },
+    autoplay: {
+        delay: 6000,
+    },
 });
 
 

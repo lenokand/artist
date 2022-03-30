@@ -83,9 +83,9 @@ class ItcTabs {
   }
 }
 
-// const tabs = document.querySelectorAll('.tabs');
-// for (let i = 0, length = tabs.length; i < length; i++) {
-//   new ItcTabs(tabs[i]);
-// }
+const tabs = document.querySelectorAll('.info-block');
+for (let i = 0, length = tabs.length; i < length; i++) {
+  new ItcTabs(tabs[i]);
+}
 
-new ItcTabs('.info-block');
+// new ItcTabs('.info-block');
