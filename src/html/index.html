@@ -69,7 +69,7 @@
 
     </section>
 
-    <section class="info-block">
+    <section class="info-block news">
 
         <div class="info-left wow fadeInLeft">
             <div class="wrapper">
@@ -116,7 +116,7 @@
                         </div>
                         <a href="" class="more">подробнее <img src="products/more.svg" alt=""></a>
                     </div>
-                    <div class="swiper-navigation">
+                    <div class="swiper-navigation news-nav">
                     
                         <div class="swiper-navigation-prev"> 	
                             <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -237,7 +237,7 @@
            
         </div>
     </section>
-    <section class="info-block photo" style="background-image: url(public/products/bg-info-2.png);">
+    <section class="info-block photo" style="background-image: url(products/bg-info-2.png);">
 
         <div class="info-left wow fadeInLeft">
             <div class="wrapper">
@@ -350,7 +350,7 @@
         </div>
      
     </section>
-    <section class="info-block video" style="background-image: url(public/products/bg-info-2.png);">
+    <section class="info-block video" style="background-image: url(products/bg-info-3.png);">
 
         <div class="info-left wow fadeInLeft">
             <div class="wrapper">
@@ -492,7 +492,7 @@
            
         </div>
     </section>
-    <section class="info-block photo" style="background-image: url(public/products/bg-info-2.png);">
+    <section class="info-block photo" style="background-image: url(products/bg-info-4.png);">
 
         <div class="info-left wow fadeInLeft">
             <div class="wrapper">
@@ -601,7 +601,7 @@
            
         </div>
     </section>
-    <section class="info-block " style="background-image: url(public/products/bg-info-2.png);">
+    <section class="info-block " style="background-image: url(products/bg-info-5.png);">
 
         <div class="info-left wow fadeInLeft">
             <div class="wrapper">
@@ -765,6 +765,75 @@
             <canvas id='canvi'></canvas>
         </div>
     </div>
+    <script>
+        
+
+// табы на главной
+
+let tab_controls = document.querySelectorAll('.info-block .info-tab_item')
+let tab_contents = document.querySelectorAll('.info-block .info-tab_content')
+
+let tab_next = document.querySelector('.news-nav .swiper-navigation-next')
+let tab_prev = document.querySelector('.news-nav .swiper-navigation-prev')
+
+if (tab_controls.length > 0) {
+
+  tab_next.addEventListener('click', function(){
+
+    let active_content_index = document.querySelector('.info-block .info-tab_item.active')
+
+    console.log(active_content_index )
+
+    let n =  active_content_index.getAttribute('data-index')
+
+   if(n < tab_controls.length){
+    console.log(n)
+    tab_controls[+n+1].click()
+    }
+    
+
+  })
+
+  tab_prev.addEventListener('click', function(){
+
+    let active_content_index = document.querySelector('.info-block .info-tab_item.active')
+    
+    let n =  active_content_index.getAttribute('data-index')
+
+   
+    if(n != 0){
+      console.log(n)
+      tab_controls[+n-1].click()
+    }
+    
+
+  })
+
+
+  tab_controls.forEach((tab, index) => {
+
+    tab.setAttribute('data-index', index)
+
+
+    tab.addEventListener('click', function(){
+
+
+     let active_content = document.querySelector('.info-block .info-tab_content.active')
+     let active_tab = document.querySelector('.info-block .info-tab_item.active')
+
+
+     active_content.classList.remove('active')
+     tab_contents[index].classList.add('active')
+
+     active_tab.classList.remove('active')
+     tab_controls[index].classList.add('active')
+
+      // console.log(active_content, tab)
+    })}
+  )}
+
+
+    </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 
