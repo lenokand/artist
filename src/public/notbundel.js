@@ -1,3 +1,23 @@
+var scene2 = document.getElementById('scene2');
+if(scene2){
+  var parallaxInstance = new Parallax(scene2);
+}
+var scene = document.getElementById('scene');
+if(scene){
+  var parallaxInstance = new Parallax(scene);
+}
+var scene3 = document.getElementById('scene3');
+if(scene3){
+  var parallaxInstance = new Parallax(scene3);
+}
+var scene4 = document.getElementById('scene4');
+if(scene4){
+  var parallaxInstance = new Parallax(scene4);
+}
+var scene5 = document.getElementById('scene5');
+if(scene5){
+  var parallaxInstance = new Parallax(scene5);
+}
 
 
 
@@ -75,30 +95,67 @@ $(window).on('load', function() {
 // // слайдеры
 
 
+
+// var swiper_navigation = new Swiper(".swiper-tabs", {
+//     // spaceBetween: 30,
+//     // effect: "fade",
+//     speed: 600,
+//     // autoHeight: true,
+//     // pagination: {
+//     //   el: ".swiper-pagination",
+//     //   type: 'bullets',
+//     //   clickable: 'true',
+//     // },
+//     // navigation: {
+//     //     nextEl: ".swiper-navigation-next",
+//     //     prevEl: ".swiper-navigation-prev",
+//     //     // clickable: true,
+//     // },
+//     freeMode: true,
+//     autoplay: {
+//         delay: 6000,
+//     },
+//     slideToClickedSlide: true,
+//     thumbs: {
+//       swiper: swiper_news,
+//     },
+// });
+
 var swiper_news = new Swiper(".swiper_news", {
-    // spaceBetween: 30,
-    // effect: "fade",
-    speed: 600,
-    // autoHeight: true,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   type: 'bullets',
-    //   clickable: 'true',
-    // },
-    navigation: {
-        nextEl: ".swiper-navigation-next",
-        prevEl: ".swiper-navigation-prev",
-        // clickable: true,
-    },
-    autoplay: {
-        delay: 6000,
-    },
+  // spaceBetween: 30,
+  // effect: "fade",
+
+
+  speed: 600,
+  // autoHeight: true,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   type: 'bullets',
+  //   clickable: 'true',
+  // },
+  navigation: {
+      nextEl: ".swiper-navigation-next",
+      prevEl: ".swiper-navigation-prev",
+      // clickable: true,
+  },
+  autoplay: {
+      delay: 6000,
+  },
+  // thumbs: {
+  //   swiper: swiper_navigation,
+  // },
+  // on: {
+  //   slideChange() {
+  //     sliders
+  //       .filter(n => n !== swiper_news)
+  //       .forEach(n => n.slideToLoop(this.realIndex));
+  //   },},
 });
 
-
-
-
-
+// swiper_news[0].params.control = swiper_navigation;
+// swiper_navigation[1].params.control = swiper_news;
+// swiper_news.controller.control = swiper_navigation;
+// swiper_navigation.controller.control = swiper_news;
 
 // var swiper_reviews = new Swiper(".swiper_main", {
 //     // spaceBetween: 30,

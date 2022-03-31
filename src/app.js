@@ -24,8 +24,8 @@ class ItcTabs {
     this._elTabs = typeof target === 'string' ? document.querySelector(target) : target;
     this._elButtons = this._elTabs.querySelectorAll('.info-tab_navigation .info-tab_item');
 
-    this._elCountTotal = this._elTabs.querySelector('.tab_count_total');//кастомизация
-    this._elCountCurent = this._elTabs.querySelector('.tab_count_current');//кастомизация
+    // this._elCountTotal = this._elTabs.querySelector('.tab_count_total');//кастомизация
+    // this._elCountCurent = this._elTabs.querySelector('.tab_count_current');//кастомизация
     
     this._elPanes = this._elTabs.querySelectorAll('.info-tab_content');
     this._eventShow = new Event('tab.itc.change');
@@ -35,7 +35,7 @@ class ItcTabs {
   _init() {
     this._elTabs.setAttribute('role', 'tablist');
 
-    this._elCountTotal.innerText = this._elButtons.length //кастомизация
+    // this._elCountTotal.innerText = this._elButtons.length //кастомизация
     
     this._elButtons.forEach((el, index) => {
       el.dataset.index = index;
@@ -48,7 +48,7 @@ class ItcTabs {
     const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
 
 
-    this._elCountCurent.innerText = +elLinkTarget.dataset.index + 1//кастомизация
+    // this._elCountCurent.innerText = +elLinkTarget.dataset.index + 1//кастомизация
 
     const elLinkActive = this._elTabs.querySelector('.info-tab_navigation .info-tab_item.active');
     const elPaneShow = this._elTabs.querySelector('.info-tab_content.active');
