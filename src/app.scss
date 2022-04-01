@@ -486,9 +486,13 @@ body {
 }
 
 // блок со слайдером
-
+.bg_wrapper{
+  background: #47235C url(public/products/bg_all.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 .info-block{
-    background: #47235C url(public/products/bg-info-news.png);
+    // background: #47235C url(public/products/bg-info-news.png);
     background-repeat: no-repeat;
     background-size: auto 100% ;
     background-position: top;
@@ -806,6 +810,10 @@ body {
   
 }
 @media screen and (max-width:760px) {
+  .info-block .news-nav, .info-block .swiper-navigation{
+    left: auto;
+    right: 0;
+  }
   .info-block{
     padding-top: 15px;
     flex-direction: column;

@@ -75,15 +75,10 @@ let tab_contents = document.querySelectorAll('.info-block .info-tab_content')
 let tab_next = document.querySelectorAll('.news-nav .swiper-navigation-next')
 let tab_prev = document.querySelectorAll('.news-nav .swiper-navigation-prev')
 
-// tab_next.addEventListener('click', function(){
-//     console.log(1)
-// })
+
 
 let active_index
 
-// function play(){
-//   console.log(2)
-// }
 
 if (tab_controls.length > 0) {
 
@@ -91,12 +86,12 @@ if (tab_controls.length > 0) {
 
 
       next.addEventListener('click', function(){
-    // console.log(active_index )
+   
       let active_content_index = document.querySelector('.info-block .info-tab_item.active')
       let n =  active_content_index.getAttribute('data-index')
 
             if(n < tab_controls.length){
-            // console.log(n)
+           
             tab_controls[+n+1].click()
             }
 
@@ -109,10 +104,10 @@ if (tab_controls.length > 0) {
         let active_content_index = document.querySelector('.info-block .info-tab_item.active')
         
         let n =  active_content_index.getAttribute('data-index')
-            // console.log(n)
+      
       
         if(n != 0){
-          // console.log(n)
+
           tab_controls[+n-1].click()
         }
           })
@@ -136,9 +131,7 @@ if (tab_controls.length > 0) {
 
      active_tab.classList.remove('active')
      tab_controls[index].classList.add('active')
-    //  active_index = index
-    //  console.log(active_index)
-      // console.log(active_content, tab)
+
     })}
   )}
 
@@ -381,7 +374,7 @@ var swiper_news = new Swiper(".swiper_news", {
 
 
 
-// // табы
+// // табы через классы
 // class ItcTabs {
 //   constructor(target, config) {
 //     const defaultConfig = {};
