@@ -3,54 +3,54 @@
 
 // preloader
 
-var c = document.getElementById('canvi');
-var numfunc = c.getContext('2d');
+// var c = document.getElementById('canvi');
+// var numfunc = c.getContext('2d');
 
-var w = c.width = window.innerWidth;
-var h = c.height = window.innerHeight;
+// var w = c.width = window.innerWidth;
+// var h = c.height = window.innerHeight;
 
-var txt = function() {
-  var _t = "Загрузка...".split("").join(String.fromCharCode(0x2004));
-  numfunc.font = "Archive";
-  numfunc.fillStyle = '#fff';
-  numfunc.fillText(_t, (c.width - numfunc.measureText(_t).width) * 0.5, c.height * 0.5);
-  return _t;
-}
+// var txt = function() {
+//   var _t = "Загрузка...".split("").join(String.fromCharCode(0x2004));
+//   numfunc.font = "Archive";
+//   numfunc.fillStyle = '#fff';
+//   numfunc.fillText(_t, (c.width - numfunc.measureText(_t).width) * 0.5, c.height * 0.5);
+//   return _t;
+// }
 
-var draw = function(a, b, t) {
-  numfunc.lineWidth = 0.8;
-  numfunc.fillStyle = '#432158';
-  numfunc.fillRect(0, 0, w, h);
-  for (var i = -60; i < 60; i += 1) {
-    numfunc.strokeStyle = '#ffffff3a';
-    numfunc.beginPath();
-    numfunc.moveTo(0, h / 2);
-    for (var j = 0; j < w; j += 10) {
-      numfunc.lineTo(10 * Math.sin(i / 10) +
-        j + 0.008 * j * j,
-        Math.floor(h / 2 + j / 2 *
-          Math.sin(j / 50 - t / 50 - i / 118) +
-          (i * 0.9) * Math.sin(j / 25 - (i + t) / 65)));
-    };
-    numfunc.stroke();
-  }
-}
-var t = 0;
+// var draw = function(a, b, t) {
+//   numfunc.lineWidth = 0.8;
+//   numfunc.fillStyle = '#432158';
+//   numfunc.fillRect(0, 0, w, h);
+//   for (var i = -60; i < 60; i += 1) {
+//     numfunc.strokeStyle = '#ffffff3a';
+//     numfunc.beginPath();
+//     numfunc.moveTo(0, h / 2);
+//     for (var j = 0; j < w; j += 10) {
+//       numfunc.lineTo(10 * Math.sin(i / 10) +
+//         j + 0.008 * j * j,
+//         Math.floor(h / 2 + j / 2 *
+//           Math.sin(j / 50 - t / 50 - i / 118) +
+//           (i * 0.9) * Math.sin(j / 25 - (i + t) / 65)));
+//     };
+//     numfunc.stroke();
+//   }
+// }
+// var t = 0;
 
-window.addEventListener('resize', function() {
-  c.width = w = window.innerWidth;
-  c.height = h = window.innerHeight;
-  numfunc.fillStyle = 'hsla(160, 95%, 55%, 1)';
-}, false);
+// window.addEventListener('resize', function() {
+//   c.width = w = window.innerWidth;
+//   c.height = h = window.innerHeight;
+//   numfunc.fillStyle = 'hsla(160, 95%, 55%, 1)';
+// }, false);
 
-var run = function() {
-  window.requestAnimationFrame(run);
-  t += 5;
-  draw(33, 52 * Math.sin(t / 2400), t);
-  txt();
-};
+// var run = function() {
+//   window.requestAnimationFrame(run);
+//   t += 5;
+//   draw(33, 52 * Math.sin(t / 2400), t);
+//   txt();
+// };
 
-run();
+// run();
 
 
 $(window).on('load', function() {

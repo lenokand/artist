@@ -29,7 +29,7 @@ module.exports = {
             ]
         }),
         new ImageminPlugin({
-            // disable: process.env.NODE_ENV !== 'production', // Disable during development
+            disable: process.env.NODE_ENV !== 'production', // Disable during development
             test: /\.(jpe?g|png|gif|svg)$/i ,
             pngquant: {
                 quality: '30-50'
@@ -42,12 +42,12 @@ module.exports = {
             inject: 'body',
             minify: false
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'salon.html',
-        //     template: './src/html/salon.html',
-        //     inject: 'body',
-        //     minify: false
-        // }),
+        new HtmlWebpackPlugin({
+            filename: 'school.html',
+            template: './src/html/school.html',
+            inject: 'body',
+            minify: false
+        }),
         // new HtmlWebpackPlugin({
         //     filename: 'examples.html',
         //     template: './src/html/examples.html',
